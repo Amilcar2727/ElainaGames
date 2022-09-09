@@ -1,7 +1,7 @@
 {
-    "token": "OTk3Njk0MTYxMzU0NDk0MTc0.GqA6ss.6jbL3619xuZRO74KLGxfrAnIOSORUv1CK_-kBE",
+    "token": "",
     "prefix": "->",
-    "mongodb": "mongodb+srv://ElainasGames:Nosemicontra27@clustergames.ytgq6.mongodb.net/ElainasGamesDB?retryWrites=true&w=majority",
+    "mongodb": "",
     "ownerIDS":["630397589832990730"],
     "color": "#808080"
 }
