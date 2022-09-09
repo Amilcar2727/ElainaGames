@@ -1,0 +1,301 @@
+{
+    "comandos":{
+        "ajustes":{
+            "claim":{
+                "variable1":"💫 La clave que mencionaste ya fue **utilizada.**",
+                "variable2":"`✅ ¡ Fue **actualizada** la fecha de expiración de las **funciones premium** en este servidor !\nExpirará <t:${Math.round((Date.now() + Number(clave.duracion)) / 1000)}:R>.`",
+                "variable3":"`✅ ¡ Se han **activado** las **funciones premium** en este servidor !\nExpirará <t:${Math.round((Date.now() + Number(clave.duracion)) / 1000)}:R>.`",
+                "variable4":"💫 No encontré la **clave** que especificaste."
+            },
+            "prefix":{
+                "variable1": "💫 ¡ Tienes que especificar un prefijo **nuevo** !",
+                "variable2": "💫 El prefijo no puede ser un **emoji.**",
+                "variable3": "`💫 El prefijo \\`${args[0]}\\` ya se **está usando.**`",
+                "variable4": "`🎆 Prefijo **cambiado** de \\`${prefix}\\` a \\`${args[0]}\\`.`"
+            },
+            "set-language":{
+                "variable1": "`💫 ¡ Tienes que especificar un lenguaje __nuevo__ para el Bot !\n**Lenguajes Disponibles**: ${idiomas.map(idioma=>`\\`${idioma}\\``).join(', ')}`",
+                "variable2": "`💫 ¡ Tienes que especificar un lenguaje __válido__ para el Bot !\n**Lenguajes Disponibles**: ${idiomas.map(idioma=>`\\`${idioma}\\``).join(', ')}`",
+                "variable3": "💫 ¡ Ya **estoy usando** ese lenguaje !",
+                "variable4": "`🎆 Lenguaje cambiado de \\`${idioma}\\` a \\`${args[0]}\\`.`"
+            }
+        },
+        "premium":{
+            "addEmoji":{
+                "error": "❌ | Error",
+                "correcto": "✔️ EMOJIS",
+                "variable1": "¡ **No se encontraron** emojis para agregar !",
+                "variable2": "`Ejecutado por: ${message.member.user.tag}.`",
+                "variable3": "`_Emoji's **agregado's** correctamente._\n `Emoji's:` ${em.toString()}`"
+            },
+            "val-premium":{
+                "variable1": "`🎆 El Servidor ${message.guild.name} es PREMIUM 🎆`",
+                "variable2": "`✅ La suscripción Expirará el <t:${Math.round((Number(clave.premium)) / 1000)}:d>.`"
+            }
+        },
+        "musica":{
+            "generico":{
+                "variable1":"💫 ¡ No hay **ninguna canción** reproduciendose !",
+                "variable2":"💫 Tienes que estar en un **canal de voz** para ejecutar este comando.",
+                "variable3":"💫 Tenemos que estar en el **mismo canal de voz** para ejecutar este comando.**"
+            },
+            "pause":{
+                "variable4": "💫 La canción ya está pausada",
+                "variable5":"⏸ **¡ Canción pausada !**"
+            },
+            "play":{
+                "variable4": "💫 Debes especificar el **nombre** de una canción.",
+                "variable5":"`🔎 Buscando **\\`${args.join(' ')}\\`...**`"
+            },
+            "queue":{
+                "titulo":"`🎶 Lista de Canciones de ${message.guild.name} - \\`[${queue.songs.length} ${queue.songs.length > 1 ? 'Canciones' : 'Canción'}]\\``",
+                "cancionAcField": "💿 Canción Actual:",
+                "cancionAcFieldr": "`\n**[\\`${queue.songs[0].name}\\`](${queue.songs[0].url})**\n**Duración:** \\`${queue.songs[0].formattedDuration}\\``",
+                "botones": "**Haz click en los __Botones__ para cambiar de páginas.**",
+                "variable5": "`**¡ El tiempo ha expirado !** escribe de nuevo \\`${prefix}queue\\` para volver a ver la cola de canciones.`"
+            },
+            "resume":{
+                "variable1": "💫 **¡ No habia ninguna canción reproduciéndose !**",
+                "variable4": "▶ **¡ Reproduciendo canción !**"
+            },
+            "skip":{
+                "variable4": "💫 ¡ No hay mas canciones en la cola !",
+                "variable5": "⏭ **¡ Saltando a la siguiente canción !**"
+            },
+            "stop":{
+                "variable4": "✨ **¡ Desconectada !**"
+            }
+        },
+        "dueño":{
+            "eval":{
+                "variable1": "💫 **¡ Tienes que especificar un código para evaluar !**",
+                "titulo": "Evaluación"
+            },
+            "keygen":{
+                "variable1": "💫 **¡ Tienes que especificar la duración Premium de la clave !**\nEjemplo: `30d`",
+                "titulo":"🔑 ¡ Nueva Clave !",
+                "field": "Generada por",
+                "fieldr": "`\\`${message.author.tag}\\` \\`${message.author.id}\\``",
+                "variable2": "💫 **¡No te he podido enviar el DM de los detalles de la clave!**\n*Clave eliminada*.",
+                "variable3": "🎆 **Nueva clave generada en la Base de Datos\nSe ha enviado la información de la clave a tus `MD's`.**",
+                "variable4": "💫 **¡ El tiempo de duración Premium que has especificado no es valido !**"
+            },
+            "md":{
+                "variable1": "Debes especificar el __usuario__ a enviar el MD",
+                "variable2": "\nTips para dar formato al mensaje:\n**->** Delineado: ``a``\n**->** Cursiva: `*a*`\n**->** Negrita: `**a**`\n**->** Subrayado: `__a__`\n**->** Spoiler: `||a||`",
+                "variable3": "💫 ¡ No encontré al **usuario especificado** !",
+                "variable4": "💫 ¡ No puedo enviar mensajes **a bots** !",
+                "variable5": "💫 ¡ Debes **escribir** el mensaje a enviar !",
+                "variable6": "`🎆 **¡ Mensaje enviado a **\\`${usuario.user.tag}\\` !`",
+                "variable7": "`¡ No pude enviar el mensaje !\n **·** \\`${usuario.user.tag}\\` tiene los MD's cerrados`"
+            }
+        },
+        "economia":{
+            "balance":{
+                "variable1": "💫 ¡ Los **bots** no pueden tener dinero !",
+                "titulo": "`Cartera Global de ${user.user.tag}`",
+                "contenido": "`💵 **Dinero:** \\`${data.dinero}\\` :coin:\n🏦 **Banco:** \\`${data.banco}\\` :coin:`"
+            },
+            "bet":{
+                "variable1": "💫 ¡ Tienes **0** :coin: en mano, no puedes apostar !",
+                "variable2": "💫 ¡ No has especificado una **cantidad valida** para apostar !",
+                "variable3": "💫 No tienes **suficientes** :coin:' para apostar.",
+                "variable4": "`**Resultados de la Apuesta:**\n¡ Has ganado **\\`${cantidad}\\`**:coin: !`",
+                "variable5": "`**Resultados de la Apuesta:**\n¡ Has perdido **\\`${cantidad}\\`**:coin: !`"
+            },
+            "daily":{
+                "variable1": "`🕓 ¡ Tienes que esperar **\\`${tiempo_restante}\\`** para volver a reclamar tu recompensa diaria !`",
+                "variable2": "`💰 ¡ Has reclamado tu recompensa diaria de **${recompensa}**:coin: !`"
+            },
+            "deposit":{
+                "variable1": "💫 ¡ Tienes **0** :coin: en mano, no puedes depositar !",
+                "variable2": "💫 ¡ No has especificado una **cantidad válida** para depositar !",
+                "variable3": "💫 No tienes **suficientes** :coin: para depositar.",
+                "variable4": "`🎆 Has depositado **\\`${cantidad}\\`**:coin: en tu banco.`"
+            },
+            "leaderboard":{
+                "variable1": "`Ranking de Economia en ${message.guild.name}`"
+            },
+            "rob":{
+                "variable1": "💫 ¡ Tienes que especificar al usuario a robar !",
+                "variable2": "💫 No se ha encontrado al usuario que has especificado.",
+                "variable3": "💫 ¡ No puedes robarte a ti mismo !",
+                "variable4": "`🕓 ¡ Tienes que esperar **\\`${tiempo_restante}\\`** para volver a robar a un usuario !`",
+                "variable5": "💫 No puedes robar a usuarios con menos de `500` :coin: .",
+                "variable6": "💫 ¡ El usuario no tiene suficiente dinero para ser robado !",
+                "variable7": "`💸 ¡ Tu robo fue un éxito !\n**Ganancias: \\`${cantidad}\\`:coin:\nVictima: \\`${usuario.user.tag}\\`**`"
+            },
+            "withdraw":{
+                "variable1": "💫 ¡ Tienes **0** :coin: en el banco, no puedes retirar algo !",
+                "variable2": "💫 ¡ No has especificado una cantidad válida para retirar !",
+                "variable3": "💫 ¡ No tienes tanto dinero para retirar !",
+                "variable4": "`🎆 **Has retirado \\`${cantidad}\\`:coin: de tu banco.**`"
+            },
+            "work":{
+                "trabajos": ["Cocinero","Desarollador","Youtuber","Chofer"],
+                "variable1": "`🕓 ¡ Tienes que esperar **\\`${tiempo_restante}\\`** para volver a trabajar !`",
+                "variable2": "`💰 ¡ Has trabajado como **\\`${trabajo}\\`** y has recibido una recompensa de **\\`${recompensa}\\`**:coin: !`"
+            }
+        },
+        "setup":{
+            "ranking":{
+                "variable1": "💫 ¡ Tienes que especificar el **canal de notificaciones** al subir de nivel !",
+                "variable2": "💫 ¡ No has especificado un **canal valido** de notificaciones al subir de nivel !",
+                "variable3": "💫 ¡ No has especificado un **mensaje** cuando un usuario sube de nivel !",
+                "variable4": "🎆 ¡ Sistema de Niveles **Activado** !",
+                "variable5": "`*Enviaré las notificaciones cuando un usuario **suba de nivel** en ${canalNotificaciones}.*\n**Mensaje:** \\`${mensaje}\\``"
+            },
+            "reactionrole":{
+                "variable1": "`¿ Qué emoji quieres usar para el \\`${contador}º\\` rol ?`",
+                "variable2": "*¡ Reacciona en **__este mensaje__** con el emoji deseado !*\n\n¡ Escribe `finalizar` para terminar el setup !",
+                "variable3": "Cancelado y finalizando setup...",
+                "variable4": "¿ Qué rol quieres usar para el emoji seleccionado ?",
+                "variable5": "*¡ Simplemente menciona el rol o escribe su ID !*",
+                "variable6": "💫 ¡ El Rol que has mencionado **NO EXISTE** !\n¡ Setup cancelado !",
+                "variable7": "💫 ¡ Tienes que añadir **al menos un emoji** con un rol !\n¡ Setup cancelado !",
+                "variable8": "Especificar Canal",
+                "variable9": "⬇ ¡ Menciona o escribe la **ID del canal** del mensaje a reaccionar ! ⬇",
+                "variable10": "Especificar Mensaje",
+                "variable11": "⬇ ¡ Escribe la **ID del mensaje** para añadir las reacciones ! ⬇",
+                "variable12": "🎆 Setup de Reacción con Roles Creado ✅",
+                "variable12.1": "`Puedes crear otro setup ejecutando el comando \\`${prefix}setup-reactionroles\\`.`",
+                "variable13": "💫 ¡ No se ha encontrado el mensaje que has especificado !\n¡ Setup cancelado !",
+                "tiempo": "¡Tu tiempo ha expirado!",
+                "variable14": "💫 ¡ No se ha encontrado el canal que has especificado !\n¡ Setup cancelado !"
+            },
+            "suggestion":{
+                "variable1": "💫 ¡ Tienes que especificar el __canal__ de sugerencias !",
+                "variable2": "💫 ¡ El canal de sugerencias que has mencionado **no existe** !",
+                "variable3": "`🎆 Establecido el canal de sugerencias a \\`${channel.name}\\`.`",
+                "variable4": "`*¡Cada vez que una persona **envie un mensaje** en ${channel}, lo convertiré a sugerencia!*`"
+            },
+            "ticket":{
+                "variable1": "¿ Que canal quieres usar para el sistema de tickets ?",
+                "variable2": "*¡ Simplemente menciona el canal o envia su ID!*",
+                "variable3": "¿ Que mensaje quieres usar para el sistema de tickets ?",
+                "variable4": "*¡ Simplemente envia el mensaje !*",
+                "variable5": "📩 TICKETS",
+                "variable6": "Crea un ticket",
+                "emoji": "📨",
+                "variable7": "🎫 ¡ Sistema de Tickets Activado !",
+                "variable7.1": "`*🎆 **Configurado correctamente en <#${objeto.canal}>** *.`",
+                "tiempo": "💫 ¡El tiempo ha expirado!",
+                "variable8": "💫 ¡ No se ha encontrado el **canal** que has especificado !"
+            },
+            "welcome":{
+                "variable1": "💫 ¡ Tienes que especificar el **canal** de bienvenidas !",
+                "variable2": "💫 El canal de bienvenida que has mencionado **no existe o no es un canal válido**.",
+                "variable3": "💫 No has puesto un **link** de la imagen.",
+                "variable4": "💫 ¡ No has especificado un **mensaje** de bienvenida válido !",
+                "variable5": "`🎆 Establecido el canal de bienvenidas a \\`${channel.name}\\`.`",
+                "variable6": "`*¡ Cada vez que una persona **se una al servidor**, enviaré en ${channel} su bienvenida !*`"
+            }
+        },
+        "info":{
+            "nivel":{
+                "variable1": "💫 ¡ El sistema de niveles **no está configurado** en este server !",
+                "variable2": "`✨ **¡ Eres nivel \\`${usuario.level}\\` !**\nNecesitas \\`${xpSiguienteNivel-usuario.xp}\\` más, para llegar al Siguiente Nivel.`"
+            },
+            "ping":{
+                "variable1": "`**¡ Boom !** 🎇\nEl ping del bot es de \\`${client.ws.ping}ms\\``" 
+            }
+        },
+        "moderacion":{
+            "antiDiscord":{
+                "variable1": "SISTEMA DE PROTECCIÓN",
+                "variable2": "`🎆 | ¡ Se ha __**${setups_data.antiDiscord ? 'ACTIVADO' : 'DESACTIVADO'}**__ el sistema de AntiEnlaces de Discord !`"
+            },
+            "antiLinks":{
+                "variable1": "SISTEMA DE PROTECCIÓN",
+                "variable2": "`🎆 | ¡ Se ha __**${setups_data.antilinks ? 'ACTIVADO' : 'DESACTIVADO'}**__ el sistema de antilinks !`"
+            },
+            "ban":{
+                "uso": "💫 ¡ Tienes que especificar el **usuario** a banear !",
+                "variable1": "💫 ¡ No se ha encontrado al **usuario** que has especificado !",
+                "elaina": "🙏 No es por nada, pero porque me quieres banear si traté de ser siempre buena.",
+                "variable2": "¡ No se ha especificado ninguna razón !",
+                "variable3": "`Has sido __BANEADO__ de ${message.guild.name}`",
+                "razon": "`*Si crees que se trata de un error, trata de comunicarte con algún admin.*\n**Razón:**\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable4": "No se le ha podido enviar el DM al usuario.",
+                "variable5": "🚨 BANEOS",
+                "variable6": "`**Usuario Baneado:** \\`${usuario.user.tag}\\`\n**Union server:** <t:${Math.round(usuario.joinedTimestamp / 1000)}:d>\n**Nro. Warns:** \\`${nrowarns}\\`\n**ID:**  \\`${usuario.id}\\``",
+                "field": "Razón:",
+                "fieldr": "`\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable7": "💫 ¡ No se ha podido avisar al usuario !",
+                "variable8": "💫 **¡ Tu rol está por __debajo__ del usuario que quieres banear !**",
+                "variable9": "💫 **¡ Mi rol está por __debajo__ del usuario que quieres banear !**"
+            },
+            "clear":{
+                "variable1": "💫 ¡ Debes escribir la **cantidad de mensajes** a borrar !",
+                "variable2": "💫 ¡ Debes de especificar un **número** valido !",
+                "variable3": "💫 ¡ Solo puedes eliminar **13 mensajes** al mismo tiempo !",
+                "variable4": "¡ No se permiten mensajes **pasados de 14 dias** !"
+            },
+            "kick":{
+                "uso": "💫 ¡ Tienes que especificar el **usuario** a kickear !",
+                "variable1": "💫 ¡ No se ha encontrado al **usuario** que has especificado !",
+                "elaina":"🙏 ¿Porque me quieres kickear?, tengo galletas :c",
+                "variable2": "¡ No se ha especificado ninguna razón !",
+                "variable3": "`Fuiste __EXPULSADO__ de ${message.guild.name}`",
+                "razon": "`*Si crees que se trata de un error, trata de comunicarte con algún admin.*\n**Razón:**\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable4": "¡ No se le ha podido enviar el DM al usuario !",
+                "variable5": "🚨 KICKS",
+                "variable6": "`**Usuario Expulsado:** \\`${usuario.user.tag}\\`\n**Union server:** <t:${Math.round(usuario.joinedTimestamp / 1000)}:d>\n**ID:**  \\`${usuario.id}\\``",
+                "field": "Razón:",
+                "fieldr": "`\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable7": "💫 **¡ Tu rol está por __debajo__ del usuario que quieres banear !**",
+                "variable8": "💫 **¡ Mi rol está por __debajo__ del usuario que quieres banear !**"
+            },
+            "miniaturas":{
+                "variable1": "SISTEMA DE INFORMACION",
+                "variable2": "`🎆 | ¡ Se ha __**${setups_data.miniaturas ? 'ACTIVADO' : 'DESACTIVADO'}**__ el sistema de MD con Información sobre las miniaturas !`",
+                "variable3": "`¡ Cada vez que una persona se una al servidor, le enviaré un MD con Info !`"
+            },
+            "sorteos":{
+                "variable1": "💫 ¡ Tienes que especificar un __método__ válido !",
+                "variable2": "💫 ¡ Tienes que especificar un __canal__ válido !",
+                "variable3": "💫 ¡ Tienes que especificar una __duración del sorteo__ válida !",
+                "variable4": "💫 ¡ Tienes que especificar una __cantidad de ganadores__ válida !",
+                "variable5": "💫 ¡ Tienes que especificar un __premio__ válido !",
+                "variable6": "`🎉 Enhorabuena {winners} has/n ganado un(a) **{this.prize}**.`",
+                "variable7": "Ganador(es): ",
+                "variable8": "`Hosteado por: {this.hostedBy}`",
+                "variable9": "Finalizado el",
+                "variable10": "`Termina en <t:{Math.round(this.endAt / 1000)}:R>`",
+                "variable11": "`✅ **Sorteo iniciado en ${canal}**.`"
+            },
+            "unwarn":{
+                "variable1": "💫 ¡ Tienes que especificar a que **usuario** quitarás el warn !",
+                "variable2": "💫 ¡ No se ha encontrado al **usuario** que has especificado !",
+                "variable3": "💫 ¡ El usuario que has especificado no tiene **ningún** warning !",
+                "variable4": "💫 ¡ No se ha encontrado el **warn** que has especificado !",
+                "variable5": "💫 ¡ La **ID del warn** que has especificado no es válida !",
+                "variable6": "💫 ¡ No se ha encontrado el **warn** que has especificado !",   
+                "titulo": "🌠 **WARN REMOVIDO**",
+                "variable7": "`Se removió el warn con ID \\`${id_warn}\\` del usuario ${usuario}.\nRazón: \\`${data.warnings[id_warn].razon}\\``",
+                "variable8": "💫 **¡ Tu rol está por __debajo__ del usuario que quieres avisar !**",
+                "variable9": "💫 **¡ Mi rol está por __debajo__ del usuario que quieres avisar !**"
+            },
+            "warn":{
+                "variable1": "💫 ¡ Tienes que especificar el **usuario** a warnear !",
+                "variable2": "💫 ¡ No se ha encontrado al **usuario** que has especificado !",
+                "bot": "💫 ¡ No puedes warnear a un **bot** !",
+                "variable3": "¡ No se ha especificado ninguna razón !",
+                "variable4": "`Has sido __WARNEADO__ de ${message.guild.name}`",
+                "razon": "`**Razón:**\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable5": "No se le ha podido enviar el DM al usuario",
+                "variable6": "<:ChikaFanTime:859579117540212786> **USUARIO AVISADO**",
+                "variable7": "`¡ Se ha warneado exitosamente a \\`${usuario.user.tag}\\` !`",
+                "field": "Razón:",
+                "fieldr": "`\n\\`\\`\\`yml\n${razon}\\`\\`\\``",
+                "variable8": "💫 **¡ Tu rol está por __debajo__ del usuario que quieres avisar !**",
+                "variable9": "💫 **¡ Mi rol está por __debajo__ del usuario que quieres avisar !**"
+            },
+            "warnings":{
+                "variable1": "`¡ \\`${usuario.user.tag}\\` no tiene **ningún warning** en el servidor !`",
+                "variable2": "`==============================\n**ID-WARN:** \\`${index}\\`\n**FECHA:** <t:${Math.round(warn.fecha /1000)}>\n**AUTOR:** <@${warn.autor}> *\\`${message.guild.members.cache.get(warn.autor).user.tag}\\`*\n**RAZÓN:** \\`${warn.razon}\\`\n`",
+                "variable3": "`:placard: \\`[${data.warnings.length}]\\` Warnings de ${usuario.user.tag}`"
+            }
+        }
+    }
+}

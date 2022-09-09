@@ -1,0 +1,31 @@
+{
+  "name": "gamesdiscord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YoNi1~",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "@discordjs/voice": "^0.11.0",
+    "@distube/soundcloud": "^1.1.0",
+    "@distube/spotify": "^1.3.2",
+    "@distube/yt-dlp": "^1.1.3",
+    "colors": "^1.4.0",
+    "dayjs": "^1.11.4",
+    "discord-giveaways": "^5.1.1",
+    "discord-html-transcripts": "^2.4.2",
+    "discord-xp": "^1.1.16",
+    "discord.js": "^13.6.0",
+    "distube": "^3.3.4",
+    "ffmpeg-static": "^4.4.1",
+    "humanize-duration": "^3.27.2",
+    "libsodium-wrappers": "^0.7.10",
+    "mongoose": "^6.3.2",
+    "ms": "^2.1.3",
+    "twemoji-parser": "^14.0.0"
+  }
+}
